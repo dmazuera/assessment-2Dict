@@ -30,18 +30,20 @@ def count_words(phrase):
     """
 
 
-    "hello Diana see Diana see too."
-    new_dict = {}
+new_dict = {}
 
-    word = phrase.split()
-       
-    for index in range(len(word)-1):
-        key = word[index]
+word = phrase.split()
+   
+for index in range(len(word)):
+    key = word[index]
 
-        new_dict[key] = new_dict.get(key, 0) + 1
+    while True:
+        if key not in new_dict:
+            new_dict[key] = new_dict.get(key, 0)+ 1
+        else:
+            break
 
-
-    return {new_dict}
+return new_dict
 
 
 def get_melon_price(melon_name):
@@ -245,7 +247,7 @@ def kids_game(names):
     
 
 
-    names = ["bagon", "baltoy", "yamask", "starly", "nosepass", "kalob", "nicky"]
+    # names = ["bagon", "baltoy", "yamask", "starly", "nosepass", "kalob", "nicky"]
 
 
     #dict keys = first_letters and values = names starting with that letter
@@ -294,13 +296,9 @@ def kids_game(names):
         # have to find another way to end the while loop.
         # while Key hasn't been added to the result yet... how?
 
-    print result
 
 
-
-
-
-    return []
+    return result
 
 #####################################################################
 # You can ignore everything below this.
